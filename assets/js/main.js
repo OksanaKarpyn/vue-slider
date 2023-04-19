@@ -59,9 +59,11 @@ const { createApp } = Vue
         // allego alla var che mi servira dopo per bloccare evento
         this.play = setInterval( ()=>{
           this.next()
-        },3000 )
+        },2000 )
       },
-      
+      stoplay(){
+        clearInterval(this.play)
+      }
     }
 
   }).mount('#app')
