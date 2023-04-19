@@ -3,6 +3,7 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
+        play:null,
         currentactive: 0,
         arrImages: [{
           image: './assets/img/01.webp',
@@ -29,6 +30,10 @@ const { createApp } = Vue
      
       }
     },
+      // function created
+      created () {
+       this.autoplay()
+      },
     methods:{
       prev(){
         if(this.currentactive == 0){
@@ -45,10 +50,18 @@ const { createApp } = Vue
           this.currentactive++
         }
       },
+      // cambia img al click
       changeImg(indice){
         this.currentactive = indice
-      }
-
+      },
+      // autoplay
+      autoplay(){
+        // allego alla var che mi servira dopo per bloccare evento
+        this.play = setInterval( ()=>{
+          this.next()
+        },3000 )
+      },
+      
     }
 
   }).mount('#app')
