@@ -71,10 +71,12 @@ img {
     overflow: hidden;
     object-fit: cover;
     height: calc(100% / 5);
+    filter: brightness(.6);
     
 }
 .itemscroll.active{
     border:2px solid red;
+    filter: brightness(1);
 }
 
 .prev,

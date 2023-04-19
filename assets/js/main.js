@@ -28,5 +28,23 @@ const { createApp } = Vue
       
      
       }
+    },
+    methods:{
+      prev(){
+        if(this.currentactive == 0){
+          this.currentactive = this.arrImages.length-1
+        }else{
+          this.currentactive--
+        }
+      },
+      next(){
+        
+        if(this.currentactive == this.arrImages.length-1){
+          this.currentactive = 0
+        }else{
+          this.currentactive++
+        }
+      }
     }
+
   }).mount('#app')
