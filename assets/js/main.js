@@ -44,7 +44,11 @@ const { createApp } = Vue
         }else{
           this.currentactive++
         }
+      },
+      changeImg(indice){
+        this.currentactive = indice
       }
+
     }
 
   }).mount('#app')

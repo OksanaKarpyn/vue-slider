@@ -71,7 +71,7 @@ img {
     overflow: hidden;
     object-fit: cover;
     height: calc(100% / 5);
-    filter: brightness(.6);
+    filter: brightness(.5);
     
 }
 .itemscroll.active{

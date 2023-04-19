@@ -40,7 +40,7 @@
 
                         <div v-for="(elem ,index) in arrImages" :key="index" class="itemscroll"
                             :class="(currentactive == index ? 'active': '')">
-                            <img :src="elem.image" alt="">
+                            <img :src="elem.image" alt="" @click="changeImg(index)">
                         </div>
                         <!-- <div class="itemscroll"> <img src="./assets/img/02.webp" alt=""> </div>
                         <div class="itemscroll"> <img src="./assets/img/03.webp" alt=""> </div>
